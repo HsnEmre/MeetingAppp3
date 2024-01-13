@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\MeetingApp3.props" />
+</Project>
