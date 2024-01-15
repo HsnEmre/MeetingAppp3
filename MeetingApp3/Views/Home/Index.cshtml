@@ -1,7 +1,23 @@
+@using MeetingApp3.Models;
+@model MeetingInfo;
+
 @{
+    ViewBag.Title="Başvuru Başvuru";
     Layout="_Layout2";
 }
 
-<h1 class="h4">Merhaba </h1>
+<main class="text-center">
+    <h1 class="h4">@ViewBag.selamlama @ViewBag.UserName </h1>
 <p>Toplantı Katılım durumunuzu bildirin</p>
+<div class="card">
+    <ul class="list-group list-group-flush" >
+        <li class="list-group-item">@Model.Location</li>
+        <li class="list-group-item">@Model.Date.ToString("dd/MM/yyyy HH:mm:ss") tarihinde gerçekleşecek</li>
+        <li class="list-group-item">@Model.NumberOfPeople Katılımcı</li>
+
+    </ul>
+</div>
+
+
 <a class="btn btn-samll btn-outline-primary " asp-controller="Meeting" asp-action="Apply" > Başvuru yap</a>
+</main>
