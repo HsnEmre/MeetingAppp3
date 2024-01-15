@@ -25,3 +25,4 @@ C:\Users\Raven\Desktop\Project\MeetingAppp3\MeetingApp3\obj\Debug\net8.0\Meeting
 C:\Users\Raven\Desktop\Project\MeetingAppp3\MeetingApp3\obj\Debug\net8.0\ref\MeetingApp3.dll
 C:\Users\Raven\Desktop\Project\MeetingAppp3\MeetingApp3\obj\Debug\net8.0\MeetingApp3.RazorAssemblyInfo.cache
 C:\Users\Raven\Desktop\Project\MeetingAppp3\MeetingApp3\obj\Debug\net8.0\MeetingApp3.RazorAssemblyInfo.cs
+C:\Users\Raven\Desktop\Project\MeetingAppp3\MeetingApp3\obj\Debug\net8.0\MeetingApp3.sourcelink.json
