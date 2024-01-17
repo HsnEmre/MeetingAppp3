@@ -1,34 +1,29 @@
-<h1 class="h4">Toplantı KAtılım Formu</h1>
-<form action="">
-
-<div class="mb-3">
-    <label for="Name" class="form-label">Ad Soyad</label>
-    <input type="text" name="Name" id="Name">    
-</div>
-<div class="mb-3">
-    <label for="Name" class="form-label">Telefon</label>
-    <input type="text" name="phone" id="phone">    
-</div>
-<div class="mb-3">
-    <label for="Name" class="form-label">E posta</label>
-    <input type="text" name="posta" id="posta">    
-</div>
-<div class="mb-3">
-    <label for="Name" class="form-label">Katılım Durumu</label>
-    <input type="text" name="WillAttend" id="WillAttend" class="form-select">
-    <option value="true">evet</option>    
-     <option value="false">hayır</option>    
-</div>
-<div class="mb-3">
-    <label for="Name" class="form-label">Name</label>
-    <input type="text" name="Name" id="Name">    
-</div>
-<div class="mb-3">
-    <label for="Name" class="form-label">Name</label>
-    <input type="text" name="Name" id="Name">    
-</div>
-
-
-
-<button class="btn btn-primary" type="submit">Kaydets</button>
+@model UserInfo
+@{
+    ViewBag.Title = "Başvuru Formu";
+}
+<h1 class="h4 text-center">Toplantı Katılım Formu</h1>
+<form method="post" action="/Meeting/Apply" novalidate>
+    <div asp-validation-summary="All"></div>
+    <div class="mb-3">
+        <label asp-for="Name" class="form-label">Ad Soyad</label>
+        <input asp-for="Name" class="form-control">
+    </div>
+    <div class="mb-3">
+        <label asp-for="Phone" class="form-label">Telefon</label>
+        <input asp-for="Phone" class="form-control">
+    </div>
+    <div class="mb-3">
+        <label asp-for="Email" class="form-label">Eposta</label>
+        <input asp-for="Email" class="form-control">
+    </div>
+    <div class="mb-3">
+        <label asp-for="WillAttend" class="form-label">Katılım Durumu</label>
+        <select asp-for="WillAttend" class="form-select">
+            <option value="">Seçiniz</option>
+            <option value="true">Evet, Geliyorum</option>
+            <option value="false">Hayır, Gelmiyorum</option>
+        </select>
+    </div>
+    <button class="btn btn-primary" type="submit">Kaydet</button>
 </form>

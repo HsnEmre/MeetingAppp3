@@ -10,23 +10,18 @@ namespace MeetingApp3.Controllers
         {
                 int saat= DateTime.Now.Hour;
                 
-
-                ViewBag.selamlama=saat>12?"iyi günler":"Günaydın";
-                ViewBag.UserName="Hasan Emre";
-
-                //viewbag alternatif
                 ViewData["Selamlama"]=saat>12?"iyi günler":"Günaydın";
-                ViewData["UserName"]="Hasan Emre Buzkan";
+                int userCount=Repository.Users.Where(info=>info.WillAttend==true).Count();
 
-                MeetingInfo meetingInfo=new MeetingInfo(){
+                var meetingInfo=new MeetingInfo(){
                     Id=1,
-                    Location="İzmir",
-                    Date=new DateTime(2024, 01 ,20 ,0 , 0),
-                    NumberOfPeople=100
-
+                    Location="İstanbul",
+                    Date=new DateTime(2023,01,20,20,0,0),
+                    NumberOfPeople=userCount
                 };
+                
 
-            return View(meetingInfo);
+            return View();
         }
 
     }
